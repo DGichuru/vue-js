@@ -166,3 +166,39 @@ function lookUpProfile(name, prop) {
 var data = lookUpProfile("Josh", "likes");
 
 console.log(data);
+//conversion of binary to integer
+function convertInteger(str) {
+
+    return parseInt(str, 2)
+
+} 
+
+console.log(convertInteger(10010))
+
+//Ternary Operators.
+function checkSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+
+checkSign(89)
+
+//concat
+var myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+//arrow function and filtering
+const realNumberArray = [4, 5.6, 6 , 9, -2, 4,-8, 5];
+
+const squareList = (arr) => {
+    const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+    return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+comsole.log(squaredIntegers)
+    
+ //destructuring 
+var voxel = {x: 3.6, y: 9.0, z: 7.89};
+
+const { x : a, y : b, z : c} = voxel;
+//rest operator
+//passing an object as a functions parameter- api calls
